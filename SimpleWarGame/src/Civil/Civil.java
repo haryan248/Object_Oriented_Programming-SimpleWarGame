@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Civil {
 	protected Unit[] myUnit;
 	protected int civil_num; // 0 korean, 1 japanese
-	protected int player;
+	protected int player; // player 1 or 2
 	Scanner sc = new Scanner(System.in);
 
 	public Civil() {
@@ -62,7 +62,7 @@ public class Civil {
 			y = sc.nextInt();
 			x = sc.nextInt();
 			if ((myUnit[index].MoveRangeCheck(y, x) == false)) {
-			} 
+			} // �̵����� �˻�
 			else if ((enemy.findUnit(xx + x, yy + y) != -1) || (findUnit(xx + x, yy + y) != -1))
 				System.out.println("Other Unit already here.");
 			else {
@@ -115,7 +115,7 @@ public class Civil {
 			index2 = enemy.findUnit(x - 1, y - 1);
 			if (myUnit[index].AttackRangeCheck(Math.abs(myUnit[index].getY() - (y - 1)),
 					Math.abs(myUnit[index].getX() - (x - 1))) == false) {
-			}
+			} 
 			else if (index2 == -1)
 				System.out.println("It's not player" + enemy.getPlayer() + "'s Unit");
 			else {
@@ -157,7 +157,7 @@ public class Civil {
 			index2 = findUnit(x - 1, y - 1);
 			if (myUnit[index].AttackRangeCheck(Math.abs(myUnit[index].getY() - (y - 1)),
 					Math.abs(myUnit[index].getX() - (x - 1))) == false) {
-			}
+			} 
 			else if (index2 == -1)
 				System.out.println("It's not player" + player + "'s Unit");
 			else {
