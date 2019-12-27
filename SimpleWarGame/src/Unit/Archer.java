@@ -8,14 +8,10 @@ public class Archer extends Unit {
 		Attack = 3;
 		Move_range = 2;
 		Attack_range = 4;
-		// 이동 거리 : 2칸/1턴
-		// 이동 방향 : 4방향(동서남북)
-		// 공격 범위 : 4칸
-		// 공격 방향 : 4방향
 
 	}
 
-	@Override // 대각선 이동불가능
+	@Override // Diagonal shift impossible
 	public boolean MoveRangeCheck(int x, int y) {
 		if (Math.abs(x) <= Move_range && Math.abs(y) <= Move_range) {
 			if (x == 0 || y == 0)
