@@ -31,7 +31,7 @@ public class Unit {
 		return unit_name;
 	}
 
-	public boolean MoveRangeCheck(int x, int y) {// 이동 범위 체크
+	public boolean MoveRangeCheck(int x, int y) {
 		if ((Math.abs(x) <= Move_range && Math.abs(y) <= Move_range))
 			return true;
 		else {
@@ -56,20 +56,20 @@ public class Unit {
 
 	public void Heal(int heal, int player) {
 		System.out.println(" Heal " + unit_name + player);
-		Hp += heal;// Hp 증가
+		Hp += heal;// increase hp
 		System.out.println(unit_name + player + "'s HitPoint inCrease " + (Hp-heal) + " to " + Hp);
 	}
 
 	public void Attack(int damage, int player) {
 		System.out.println(" Attack " + unit_name + player);
-		Hp -= damage;// Hp 감소
+		Hp -= damage;// decrease hp
 		if (Hp <= 0) {
 			if (unit_name.equals("K")) {
 
 				System.out.println(unit_name + player + "'s HitPoint decrease " + Hp + " to 0");
 				System.out.println("----------------Player" + player + " Lose!----------------");
 				System.out.println("----------------Game Over----------------");
-				System.exit(1);// 게임 종료
+				System.exit(1);// game over
 
 			} else {
 				System.out.println(unit_name + player + "'s HitPoint decrease " + (Hp + damage) + " to 0");
