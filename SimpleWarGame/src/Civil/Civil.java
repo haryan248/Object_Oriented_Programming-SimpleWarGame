@@ -62,7 +62,7 @@ public class Civil {
 			y = sc.nextInt();
 			x = sc.nextInt();
 			if ((myUnit[index].MoveRangeCheck(y, x) == false)) {
-			} // �̵����� �˻�
+			} 
 			else if ((enemy.findUnit(xx + x, yy + y) != -1) || (findUnit(xx + x, yy + y) != -1))
 				System.out.println("Other Unit already here.");
 			else {
