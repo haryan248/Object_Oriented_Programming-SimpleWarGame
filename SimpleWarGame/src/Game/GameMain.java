@@ -96,25 +96,26 @@ public class GameMain {
 	public void draw() {
 		drawUnit();
 		System.out.println("    1     2     3     4     5     6     7     8     9     10    11");
-		System.out.println("  ¦®¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¯");
+
+		System.out.println("  â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”“");
 		for (int i = 0; i < 11; i++) {
 			System.out.printf("%2d", i + 1);
-			System.out.print("¦­");
+			System.out.print("â”ƒ");
 			for (int j = 0; j < 11; j++) {
-				System.out.print(map[i][j] + "¦­");
+				System.out.print(map[i][j] + "â”ƒ");
 			}
 			System.out.println();
 			if (i == 10)
-				System.out.println("  ¦±¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦°");
+				System.out.println("  â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”›");
 			else
-				System.out.print("  ¦²¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦´");
+				System.out.print("  â”£â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”«");
 			System.out.println("");
 		}
 	}
 
 	public void Run() {
 		int num;
-		boolean turn = true; // 1ÅÏ true, 2ÅÏ false
+		boolean turn = true; // 1 true, 2 false
 
 		System.out.println("====Simple War Simulation Game====");
 		for (int i = 0; i < 2; i++) {
@@ -140,7 +141,7 @@ public class GameMain {
 		}
 
 		while (true) {
-			draw(); // °ÔÀÓ ¸ÊÀ» º¸¿©ÁÜ
+			draw(); // Show game board
 			if (turn == true) {
 				System.out.println("Player1's turn.");
 			} else
@@ -161,7 +162,7 @@ public class GameMain {
 				break;
 			case 2:
 				System.out.println("Choose Attack - Select Unit for Attack(Coordinate)");
-				if (turn)// player 1
+				if (turn)//player 1
 					civil[0].attackUnit(civil[1]);
 				else // player 2
 					civil[1].attackUnit(civil[0]);
@@ -173,10 +174,10 @@ public class GameMain {
 					civil[0].HealUnit();
 				else // player 2
 					civil[1].HealUnit();
-				turn = !turn;//change turn
+				turn = !turn;// change turn
 				break;
 			case 4:
-				turn = !turn;//change turn
+				turn = !turn;// change turn
 				break;
 			default:
 				System.out.println("Please re-enter.");
