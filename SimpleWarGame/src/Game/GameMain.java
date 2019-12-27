@@ -18,7 +18,7 @@ public class GameMain {
 		boardInit();
 	}
 
-	public void boardInit() {// 보드판 초기화
+	public void boardInit() {
 		for (int i = 0; i < 11; i++)
 			for (int j = 0; j < 11; j++)
 				map[i][j] = "     ";
@@ -161,22 +161,22 @@ public class GameMain {
 				break;
 			case 2:
 				System.out.println("Choose Attack - Select Unit for Attack(Coordinate)");
-				if (turn)// 플레이어 1턴이면
+				if (turn)// player 1
 					civil[0].attackUnit(civil[1]);
-				else // 플레이어 2턴이면
+				else // player 2
 					civil[1].attackUnit(civil[0]);
-				turn = !turn;// 턴 바꾸기
+				turn = !turn;// change turn
 				break;
 			case 3:
 				System.out.println("Choose Heal - Select Unit for Heal(Coordinate)");
-				if (turn)// 플레이어 1턴이면
+				if (turn)// player 1
 					civil[0].HealUnit();
-				else // 플레이어 2턴이면
+				else // player 2
 					civil[1].HealUnit();
-				turn = !turn;// 턴 바꾸기
+				turn = !turn;//change turn
 				break;
 			case 4:
-				turn = !turn;// 턴 바꾸기
+				turn = !turn;//change turn
 				break;
 			default:
 				System.out.println("Please re-enter.");
