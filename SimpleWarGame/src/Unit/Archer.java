@@ -11,7 +11,7 @@ public class Archer extends Unit {
 
 	}
 
-	@Override // Diagonal shift impossible
+	@Override  // Diagonal shift impossible
 	public boolean MoveRangeCheck(int x, int y) {
 		if (Math.abs(x) <= Move_range && Math.abs(y) <= Move_range) {
 			if (x == 0 || y == 0)
