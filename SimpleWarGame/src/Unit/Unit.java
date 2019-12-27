@@ -56,20 +56,20 @@ public class Unit {
 
 	public void Heal(int heal, int player) {
 		System.out.println(" Heal " + unit_name + player);
-		Hp += heal;// increase hp
+		Hp += heal;// Hp increase
 		System.out.println(unit_name + player + "'s HitPoint inCrease " + (Hp-heal) + " to " + Hp);
 	}
 
 	public void Attack(int damage, int player) {
 		System.out.println(" Attack " + unit_name + player);
-		Hp -= damage;// decrease hp
+		Hp -= damage;// Hp decrease
 		if (Hp <= 0) {
 			if (unit_name.equals("K")) {
 
 				System.out.println(unit_name + player + "'s HitPoint decrease " + Hp + " to 0");
 				System.out.println("----------------Player" + player + " Lose!----------------");
 				System.out.println("----------------Game Over----------------");
-				System.exit(1);// game over
+				System.exit(1);// gameover
 
 			} else {
 				System.out.println(unit_name + player + "'s HitPoint decrease " + (Hp + damage) + " to 0");
